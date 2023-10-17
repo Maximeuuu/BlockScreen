@@ -36,23 +36,37 @@ public class JBloc extends JFrame
 		this.setVisible(true);
 		this.setAlwaysOnTop(true);
 		
-		try
-        {
-             setCursor(
-                  Toolkit
-                  .getDefaultToolkit()
-                  .createCustomCursor(
-                         new ImageIcon("Diamond_Pickaxe.png").getImage(),
-                         new Point(50,150),
-                         "Mon curseur"
-                  )
-             );
-        }catch(Exception e){}
+		switch( type )
+		{
+			case "pierre_lisse.png" -> this.setCursor( "pioche", "Diamond_Pickaxe_2.png" );
+			case "herbe.jpg" -> this.setCursor( "pelle", "Bois_Pelle.png" );
+			case "terre.jpg" -> this.setCursor( "pelle", "Bois_Pelle.png" );
+			default -> this.setCursor( "pioche", "Diamond_Pickaxe_2.png" );
+		}
 	}
 	
 	public JBloc( String type, int x, int y, int taille, int cassable )
 	{
 		this(type, x, y, taille, taille, taille, taille, cassable );
+	}
+	
+	public boolean setCursor( String nom, String fichier )
+	{
+		try
+		{
+			setCursor(
+				Toolkit.getDefaultToolkit().createCustomCursor(
+					new ImageIcon("./../lib/images/objets/"+fichier).getImage(),
+					new Point(143,140),
+					nom
+				)
+			);
+			return true;
+		}
+		catch(Exception e)
+		{
+			return false;
+		}
 	}
 
 }
