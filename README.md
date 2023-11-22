@@ -1,3 +1,3 @@
 # BlockScreen
 
-Programme qui remplit l'écran de bloque
+Programme qui remplit l'écran de blocs
