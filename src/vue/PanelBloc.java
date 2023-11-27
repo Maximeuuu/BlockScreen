@@ -47,10 +47,10 @@ public class PanelBloc extends JPanel  implements MouseListener
 		String image="";
 		
 		g = (Graphics2D)(g);
-		g.drawImage( getToolkit().getImage ( this.type+"" ), 0,0, this.tailleImgX,this.tailleImgY,this );
+		g.drawImage( getToolkit().getImage ( "./../lib/images/blocs/"+this.type ), 0,0, this.tailleImgX,this.tailleImgY,this );
 		if( this.cpt > 0 )
 		{
-			g.drawImage( getToolkit().getImage ( "destroy-block-textures_"+(this.cpt+1)+"-removebg.png" ), 0,0, this.tailleImgX, this.tailleImgY, this );
+			g.drawImage( getToolkit().getImage ( "./../lib/images/animations/"+"destroy-block-textures_"+(this.cpt)+".png" ), 0,0, this.tailleImgX, this.tailleImgY, this );
 		}
 		
 	}
