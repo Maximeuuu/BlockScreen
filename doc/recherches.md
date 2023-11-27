@@ -6,3 +6,6 @@ translations : https://www.boitasite.com/pdf/java/APPGR6JavaP.pdf
 github :
 https://www.fxparlant.net/github-ajouter-un-projet-deja-cree/
 $ git add . est la commande qui « stage » tous les documents, qui les ajoute à l’index. Pour info, on peut sortir de la pile un document avec la commande $ git reset HEAD votreFichier
+
+
+
